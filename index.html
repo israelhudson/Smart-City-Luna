@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]
+  </head> -->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+
+	        <div class="navbar-header">
+
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barra-navegacao">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="sr-only">Alternar Menu</span>
+	          </button>
+	          <a href="#" > <img src="img/lg2.png" class="logo">  </a>
+
+	        </div>
+
+	        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+	          <ul class="nav navbar-nav">
+	            <li class="active"> <a href="#fortaleza">Fortaleza</a></li>
+	            <li> <a href="#empresa">Sobre</a></li>
+	            <li> <a href="#casas">Casas</a></li>
+	            <li> <a href="#pracas">Praças</a></li>
+	            <li> <a href="#estabelecimentos">Estabelecimentos</a></li>
+	            <li> <a href="#contato">Contato</a></li>
+
+	          </ul>
+
+	        </div>
+
+        </div>
+</nav>
+
+<div id="fortaleza" class="container-fluid">
+			<h1 class="text-center">Fortaleza</h1>
+	
+<div class="w3-container">
+<h2>Smart City Luna</h2>
+<p>Alguns fotos de nossa cidade</p>
+</div>
+
+<div class="w3-content w3-display-container" style="max-width:550px">
+<img class="mySlides" src="img/imagem1.jpg" style="width:100%">
+<img class="mySlides" src="img/imagem2.jpg" style="width:100%">
+<img class="mySlides" src="img/imagem3.jpg" style="width:100%">
+<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+if (n > x.length) {slideIndex = 1}
+if (n < 1) {slideIndex = x.length}
+for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+ dots[i].className = dots[i].className.replace(" w3-white", "");
+}
+x[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " w3-white";
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+		</div>
+
+		<div id="casas" class="container-fluid">
+			<h1 class="text-center">Casas</h1>
+
+				<div class="row">
+				
+					<div class="col-lg-6" class="col-xs-12">
+						
+							<img src="img/casa-inteligente.jpg" class="img-responsive" class="col-xs-12">						
+					</div>
+				
+				
+
+				
+					<div class="col-lg-6" class="col-xs-12">
+						
+							<h3>
+								Casas Inteligentes
+							</h3>
+							<p>
+								As casas inteligentes oferecem soluções integradas controladas por um dispositivo móvel, por meio da automatização. <br>
+							Segurança: com o uso de um smartphone ou tablet você pode controlar as câmeras de segurança, sensores e alarmes de fumaça. E você ainda recebe vídeos, e-mail e mensagens de texto quando algum movimento suspeito é identificado.
+
+							Também é possível controlar quem pode entrar em cada horário, ou simplesmente monitorar quem entrou e quanto tempo permaneceu na casa.<br>
+							Economia: termostatos, sprinklers, lâmpadas e módulos de aquecimento de água automatizados podem te ajudar na economia das contas de energia e água.<br>
+							Praticidade: diversos equipamentos eletroeletrônicos e lembretes de áudio podem ser controlados e programados por aplicativo.
+							</p>
+						
+						
+					</div>
+				</div>
+				 <button type="'button" name="button" id="btnTopo" onclick="goTopo()" class="btn btn-primary glyphicon glyphicon-chevron-up">Topo</button>
+
+
+
+		</div>
+
+		<div id="pracas" class="container-fluid">
+			<h1 class="text-center">Praças</h1>
+				<div class="row">
+					<div class="col-lg-12">
+						<img src="praca.jpg" class="img-responsive">
+					</div>
+				
+			
+					<div class="col-lg-12">
+						<h3>Luna Praças</h3>	
+						<p>
+							O projeto “Praças Inteligentes” dará a possibilidade de uma pessoa acessar a internet do seu notebook, tablet ou até mesmo celular, através de uma rede sem fio. O paisagismo e a vegetação também serão elaborados de maneira atrativa e que conversem com a história do bairro onde está localizada a praça. A segurança não pode ficar de fora. O projeto prevê a presença integral de viaturas da polícia e a instalação de câmeras, que serão monitoradas diretamente pelo Centro de Controle da Prefeitura. Além disso, a iluminação será de led com alimentação fotovoltaica com o objetivo de nunca deixar os usuários na mão. A tela digital será uma surpresa a parte. Através dela, serão transmitidos jogos de futebol e até mesmo filmes.
+						</p>
+					</div>
+				
+				</div>
+				<button type="'button" name="button" id="btnTopo" onclick="goTopo()" class="btn btn-primary glyphicon glyphicon-chevron-up">Topo</button>
+
+		</div>
+
+		<div id="estabelecimentos" class="container-fluid">
+			<h1 class="text-center">Estabelecimentos</h1>
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="img/estabelecimento.jpg" class="img-responsive">
+				</div>
+			
+			
+			<div class="col-lg-12">
+				<h3> Luna empresarial</h3>
+				<p>
+				Em nossa pesquisa, observamos impactos centrais. Em primeiro lugar, elas podem receber novos cidadãos e empresas, o que significa um aumento na arrecadação de impostos, porque o local se tornou mais atraente para viver e fazer negócios.
+
+				Em segundo lugar, as cidades podem experimentar desenvolvimento econômico com a criação de novos postos de trabalho, mas também com a diversificação da economia local.
+
+				Em terceiro, as cidades às vezes são capazes de economizar dinheiro graças aos projetos elaborados, sendo capazes de reduzir o consumo de energia ou tornar as operações mais eficientes.
+
+				Por último, as soluções inteligentes podem gerar receitas adicionais, como na implementação de um estacionamento inteligente.
+				</p>
+			</div>
+		</div>
+			 <button type="'button" name="button" id="btnTopo" onclick="goTopo()" class="btn btn-primary glyphicon glyphicon-chevron-up">Topo</button>
+
+			
+
+		</div>
+		<div id="empresa" class="container-fluid">
+			<h1 class="text-center">Sobre</h1>
+		
+
+			<h3>Missão</h3>
+			<p>
+				Desenvolver soluções tecnológicas para o crescimento econômico sustentável das cidades inteligentes.
+			</p>
+			<h3>Visão</h3>
+			<p>
+				Mobilidade urbana: quanto ao transporte público, planejamento urbano, controle de tráfego, tudo beneficiado através da tecnologia;<br>
+				Sustentabilidade: controlar com eficiência o uso de recursos na cidade, bem como o descarte de bens e também o impacto ambiental e social;<br>
+				Integração entre cidade e cidadão: diálogo com a população através de diferentes meios de comunicação;<br>
+				Inovação: criar canais participativos para incentivar a sociedade a sugerir novas formas de governo em diversos áreas.
+			</p>
+			<h3>Valores</h3>
+			<p>
+				Ética, Sustentabilidade, Responsabilidade, Competencia, Exelencia.
+			</p>
+			 <button type="'button" name="button" id="btnTopo" onclick="goTopo()" class="btn btn-primary glyphicon glyphicon-chevron-up">Topo</button>
+			
+		</div>
+		<div id="contato" class="container-fluid">
+			<h1 class="text-center">Entre em contato conosco</h1>
+				<div class="row">
+					<div class="col-md-4">
+						<form method="post" action="enviaEmail.php">
+					    	 <center>
+					          <input id="nome" type="text" required="required" name="nome" placeholder="&nbsp;Nome" class="form-control">
+					            <br>
+				                  <input id="telefone" type="text" required name="telefone" placeholder="&nbsp;Telefone" class="form-control">
+				                  <br>
+				                  <input id="email" type="email" required name="email" placeholder="&nbsp;Email" class="form-control">
+				                  <br>
+				                  <input id="assunto" type="text" required name="assunto" placeholder="&nbsp;Assunto" class="form-control">
+				                  <br>
+				                  <textarea name="mensagem" id="mensagem" required  placeholder="&nbsp;Mensagem" class="form-control"> </textarea><br />
+				                
+				                  <button id="btnEnviar" type="button" class="botao" name="submit"> Enviar </button>
+				             </center>
+		             	 </form>
+	              	</div>	              	
+			   		<div class="col-md-2">
+			   			
+			   		</div>
+			   	    <div class="col-md-6">
+			   	    	<h3> Localização</h3>
+				         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.625831308579!2d-38.45012298648992!3d-3.890102545102337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c75a5099781b05%3A0x3cb3329ffbd6b0fc!2sAv.+Eus%C3%A9bio+de+Queiroz%2C+Eus%C3%A9bio+-+CE!5e0!3m2!1spt-BR!2sbr!4v1508689004260" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				    </div> 
+				              
+			     </div>
+
+			    
+			      <button type="'button" name="button" id="btnTopo" onclick="goTopo()" class="btn btn-primary glyphicon glyphicon-chevron-up">Topo</button>
+		</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+<footer>
+
+    <p>Created by Smart City Luna - Copyright 2016</p>
+
+ </footer>
+
+<style media="screen">
+  #btnTopo{
+    float: right;
+    margin-bottom: 0px
+    
+  }
+</style>
+
+<script>
+  function goTopo(){
+    window.scrollTo(0, 0);
+  }
+
+
+</script>
+
+
+</html>
