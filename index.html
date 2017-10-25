@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap</title>
+    <title>Smart City Luna</title>
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <![endif]
   </head> -->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="limpaForm()">
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -71,7 +71,7 @@
 <p>Alguns fotos de nossa cidade</p>
 </div>
 
-<div class="w3-content w3-display-container" style="max-width:550px">
+<div class="w3-content w3-display-container" style="max-width:550px;">
 <img class="mySlides" src="img/imagem1.jpg" style="width:100%">
 <img class="mySlides" src="img/imagem2.jpg" style="width:100%">
 <img class="mySlides" src="img/imagem3.jpg" style="width:100%">
@@ -237,7 +237,7 @@ function carousel() {
 			<h1 class="text-center">Entre em contato conosco</h1>
 				<div class="row">
 					<div class="col-md-4">
-						<form method="post" action="enviaEmail.php">
+						<form method="post" action="enviaEmail.php" id="formEnvio">
 					    	 <center>
 					          <input id="nome" type="text" required="required" name="nome" placeholder="&nbsp;Nome" class="form-control">
 					            <br>
@@ -248,8 +248,7 @@ function carousel() {
 				                  <input id="assunto" type="text" required name="assunto" placeholder="&nbsp;Assunto" class="form-control">
 				                  <br>
 				                  <textarea name="mensagem" id="mensagem" required  placeholder="&nbsp;Mensagem" class="form-control"> </textarea><br />
-				                
-				                  <button id="btnEnviar" type="button" class="botao" name="submit"> Enviar </button>
+								 <button class="btn btn-primary" type="submit" value="button" id="btnEnviar">Enviar mensagem</button>
 				             </center>
 		             	 </form>
 	              	</div>	              	
@@ -289,13 +288,17 @@ function carousel() {
   }
 </style>
 
-<script>
-  function goTopo(){
-    window.scrollTo(0, 0);
-  }
+  <script>
+      function goTopo(){
+          window.scrollTo(0, 0);
+      }
+
+      function limpaForm() {
+          document.getElementById('formEnvio').reset();
+      }
 
 
-</script>
+  </script>
 
 
 </html>

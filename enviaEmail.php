@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: israe
+ * User: israel
  * Date: 23/10/2017
  * Time: 01:03
  */
@@ -21,8 +21,8 @@ function enviarEmail($nome_cliente, $telefone_cliente, $email_cliente, $assunto_
     $mail->setLanguage('pt_br');
 
     $host = 'smtp.gmail.com';
-    $user = 'contatomoteldragon@gmail.com';
-    $senha = 'j1cpm9r9gvo9';
+    $user = 'ihudtestes@gmail.com';
+    $senha = '87257847';
     $mail->isSMTP();
     $mail->Host = $host;
     $mail->Port = 587;
@@ -40,19 +40,36 @@ function enviarEmail($nome_cliente, $telefone_cliente, $email_cliente, $assunto_
     $mail->CharSet = 'UTF-8';
     $mail->msgHTML("
         <html>
+            <img src='http://ihudtecnologia.com/SamrtCity-5.0/img/lg2.png' alt=''>
             <body>
-                
+            <h3>Obrigado pela mensagem $nome_cliente,</h3>
+            <p>Sua mensagem foi recebida. </p> 
+            Telefone: $telefone_cliente <br> 
+            Assunto: $assunto_cliente <br>
+            Menssagem: $mensagem_cliente <br><br>
+            
+            Att, Smart City Luna.
             </body>
         </html>
     ");
     $mail->AltBody = 'Mensagem de boas-vindas';
 
     if (!$mail->send()) {
-        $confirmaEnvio = false;
-        die("Erro no envio do e-mail: {$mail->ErrorInfo}");
+        echo "<script>
+                alert('Erro ao enviar a mensagem. Desculpe');
+                javascript:history.back();
+                
+  window.scrollTo(0, 0);
+            </script>";
+        die("Erro no envio da mensagem: {$mail->ErrorInfo}");
     }else{
-        $confirmaEnvio = true;
-        echo 'Cupom gerado com Sucesso';
+        //echo 'Mensagem enviada com sucesso!';
+        echo "<script>
+                alert('Mensagem enviada com sucesso. Obrigado!');
+                javascript:history.back();
+                
+  window.scrollTo(0, 0);
+            </script>";
     }
 
 }
